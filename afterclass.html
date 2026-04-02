@@ -1,79 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Clean Page</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1e1e2f, #3a3a5a);
-            color: white;
-        }
+<meta charset="UTF-8">
+<title>Shravan Vivek</title>
 
-        header {
-            padding: 20px;
-            text-align: center;
-            background: rgba(0, 0, 0, 0.3);
-            font-size: 24px;
-            letter-spacing: 2px;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: white;
+        overflow: hidden;
+    }
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-        }
+    .page {
+        display: none;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
 
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            text-align: center;
-            width: 300px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
+    .active {
+        display: flex;
+    }
 
-        .card h1 {
-            margin-bottom: 10px;
-        }
+    .btn {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        background: #00c6ff;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
 
-        .card p {
-            font-size: 14px;
-            opacity: 0.8;
-        }
+    .btn:hover {
+        background: #0072ff;
+        transform: scale(1.1);
+    }
 
-        .btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 20px;
-            background: #ff7a18;
-            color: white;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+    .card {
+        background: rgba(255,255,255,0.1);
+        padding: 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        width: 350px;
+        animation: fadeIn 1s ease;
+    }
 
-        .btn:hover {
-            background: #ff9a3c;
-        }
-    </style>
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        opacity: 0.85;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(20px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
 </head>
+
 <body>
 
-<header>
-    My Cool Website
-</header>
+<!-- Page 1 -->
+<div id="page1" class="page active">
+    <h1>Welcome 👋</h1>
+    <p>Click below to know more about me</p>
+    <button class="btn" onclick="openPage()">Click to Open</button>
+</div>
 
-<div class="container">
+<!-- Page 2 -->
+<div id="page2" class="page">
     <div class="card">
-        <h1>Hello 👋</h1>
-        <p>This is a clean and simple modern design.</p>
-        <button class="btn">Click Me</button>
+        <h1>Shravan Vivek</h1>
+        <p>Hi! I'm 14 years old and currently in Grade 9.</p>
+        <p>I love coding and building websites using HTML and Python.</p>
+        <p>I mainly use VS Code and Visual Studio for C# and more.</p>
+
+        <button class="btn" onclick="goBack()">Go Back</button>
     </div>
 </div>
+
+<script>
+function openPage() {
+    document.getElementById("page1").classList.remove("active");
+    document.getElementById("page2").classList.add("active");
+}
+
+function goBack() {
+    document.getElementById("page2").classList.remove("active");
+    document.getElementById("page1").classList.add("active");
+}
+</script>
 
 </body>
 </html>
