@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>SportZone - Activities 2</title>
+    <style>
+        body {font-family: Arial, sans-serif; background: #f0f4ff; padding: 20px; min-height: 1800px; }
+        h1 {color: #1d4ed8; text-align: center; margin-top: 65px;}
+        h2 {color: #1d4ed8; margin-top: 30px;}
+        p {color : #555; margin-bottom: 10px;}
+
+        .score-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #1d4ed8;
+            color: white;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .player-wrapper { position: relative; display: inline-block; margin-top: 15px; }
+        .player-card {
+            background: white;
+            border: 2px solid #1d4ed8;
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        .winner-badge {
+            position: absolute;
+            top: -12px; right: -12px;
+            background: #f59e0b;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .league-label {
+            position:sticky;
+            top: 52px;
+            background: #1d4ed8;
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+        .player-item {
+            background:white;
+            border: 2px solid #1d4ed8;
+            padding: 10px 20px;
+            margin: 8px 0;
+            width: 220px;
+            border-radius: 8px;
+        }
+    </style>
+    <body>
+
+<div class="score-bar">&#127942; SportZone &nbsp;|&nbsp; Live Score: Team A 3 — 2 Team B &nbsp;|&nbsp; FIXED</div>
+
+<h1>&#127942; SportZone Tournament</h1>
+
+<h2>Absolute Positioning</h2>
+
+<p>The gold badge is pinned to the player card using <strong>position: absolute</strong>. The card has <strong>position: relative</strong>.</p>
+
+<div class="player-wrapper">
+
+<div class="player-card">&#9917; Alex Johnson<br>Striker — 12 Goals</div>
+
+<div class="winner-badge">&#127942; MVP</div>
+
+</div>
+
+<h2>Fixed Positioning</h2>
+
+<p>The blue scoreboard at the top uses <strong>position: fixed</strong>. Scroll down — it always stays visible!</p>
+
+<h2>Sticky Positioning</h2>
+
+<p>The league label scrolls with the page, then sticks to the top as you scroll past it.</p>
+
+<div class="league-label">&#127942; Premier League Players — STICKY</div>
+
+<div class="player-item">&#9917; Alex Johnson — 12 Goals</div>
+
+<div class="player-item">&#9917; Sam Rivera — 10 Goals</div>
+
+<div class="player-item">&#9917; Jordan Lee — 9 Goals</div>
+
+<div class="player-item">&#9917; Casey Kim — 8 Goals</div>
+
+<div class="player-item">&#9917; Morgan Chen — 7 Goals</div>
+
+<div class="player-item">&#9917; Riley Park — 6 Goals</div>
+
+<h2>top, right, bottom, left</h2>
+
+<p>These control exactly where a positioned element is placed. Try changing the values on <strong>.winner-badge</strong> above!</p>
+
+<p>top — down from top &nbsp;|&nbsp; right — left from right &nbsp;|&nbsp; bottom — up from bottom &nbsp;|&nbsp; left — right from left</p>
+
+</body>
+</html>
